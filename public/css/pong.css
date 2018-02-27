@@ -1,0 +1,44 @@
+body {
+	font-family: arial, Arial, Helvetica, sans-serif;
+}
+
+.field {
+	box-sizing: content-box;
+	position: fixed;
+	right: 50px;
+	top: 50px;
+	border: 2px solid;
+	border-bottom: none;
+	width: 500px;
+	height: 600px;
+}
+
+.score {
+	position: absolute;
+	right: 100%;
+	padding-right: 1em;
+	font-size: 3em;
+	text-align: right;
+}
+
+.bar {
+	display: block;
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100px;
+	height: 20px;
+	background: #999;
+	background: #333;
+}
+
+.ball {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background: #999;
+}

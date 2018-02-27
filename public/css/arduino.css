@@ -1,0 +1,44 @@
+label {
+	cursor: pointer;
+}
+
+.example {
+	margin-bottom: 2em;
+}
+
+.led {
+	position: relative;
+	display: inline-block;
+	width: 10px;
+	height: 15px;
+	border: 1px solid currentColor;
+	border-radius: 5px 5px 0 0;
+	background: rgba(0, 255, 0, 0.2);
+	color: limegreen;
+	transition: background 0.3s, box-shadow 0.3s;
+}
+
+.led.led--is-on {
+	background: rgba(0, 255, 0, 0.8);
+	box-shadow: 0 0 10px 2px rgb(0, 255, 0);
+}
+
+.led::before,
+.led::after {
+	position: absolute;
+	display: block;
+	content: '';
+	border-left: 1px solid;
+	width: 0;
+	height: 20px;
+	color: #999;
+	top: calc(100% + 1px);
+	left: 2px;
+}
+
+.led::after {
+	left: auto;
+	right: 2px;
+	height: 25px;
+}
+

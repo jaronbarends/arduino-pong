@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Arduino pong</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/arduino.css">
+	<link rel="stylesheet" href="css/pong.css">
+</head>
+
+<body>
+
+	<h1>Arduino pong</h1>
+
+	<!-- Start socket identification (for debugging purposes) -->
+		<!--
+		<div id="id-box" class="id-box">
+			socket id: <span class="user-id"></span>
+		</div>
+		-->
+	<!-- Start socket identification (for debugging purposes) -->
+
+	<!-- Start socket-reloader (for debugging purposes) -->
+		<!--
+		<div id="socket-reloader">
+			<a id="reload-all-sockets" href="#">Reload all sockets</a>
+		</div>
+		-->
+	<!-- End socket-reloader (for debugging purposes) -->
+	
+	<div class="example">
+		<a href="#" id="restart">restart</a>
+	</div>
+
+	<div id="field" class="field">
+		<div id="score" class="score">0</div>
+		<div id="ball" class="ball"></div>
+		<div id="bar" class="bar"></div>
+	</div>
+
+
+
+	<!-- Socket.io library -->
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/socket.io-hub-proxy.js"></script>
+
+	<!-- main js files -->
+	<script src="js/arduino-pong.js"></script>
+
+	<!-- debugging/helper js files -->
+	<script src="js/reload-sockets.js"></script>
+	<script src="js/show-socket-id.js"></script>
+
+</body>
+</html>
