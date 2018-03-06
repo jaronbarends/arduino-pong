@@ -31,6 +31,8 @@ const initBasicRequirements = function() {
 	// the express app, which allows them to coexist.
 	io = require('socket.io').listen(app.listen(port));
 
+	console.log('dirname:', __dirname);
+
 	// Make the files in the public folder available to the world
 	app.use(express.static(__dirname + '/public'));
 

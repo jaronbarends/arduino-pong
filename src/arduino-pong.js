@@ -3,7 +3,7 @@
 // one on 5v
 // one on A2
 
-const nodeBridge = require('./socket.io-node-bridge.js');
+const nodeBridge = require('./node-scripts/socket.io-node-bridge.js');
 const hubProxy = nodeBridge.hubProxy;
 const five = require('johnny-five');
 const leds = {};
