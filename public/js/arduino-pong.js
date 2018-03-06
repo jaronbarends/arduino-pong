@@ -43,14 +43,14 @@
 		x: field.width - bar.width
 	};
 
-	// console.log(bar.pos.top);
 
 	const ballElm = document.getElementById('ball'),
 		blcs = window.getComputedStyle(ballElm),
 		ball = {
 			width: parseInt(blcs.width, 10),
 			height: parseInt(blcs.height, 10),
-			startSpeed: 6
+			startSpeed: 6,
+			minSpeed: 2
 		};
 	ball.range = {
 		x: field.width - ball.width
@@ -163,6 +163,12 @@
 				if ( (now - bar.lastMove.ts) < 100) {
 					// bar was moving (recently), so adjust speed.x
 					ball.speed.x += bar.lastMove.dx/4;
+					// make sure speed doesn't get too small
+					if (ball.speed.x >= 0) {
+						ball.speed.x = Math.max(ball.minSpeed, ball.speed.x);
+					} else {
+						ball.speed.x = Math.min(-ball.minSpeed, ball.speed.x);
+					}
 				}
 			} else {
 				// loose a life

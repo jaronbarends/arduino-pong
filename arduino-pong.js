@@ -63,8 +63,6 @@ const initKnob = function() {
 		treshold: 10
 	});
 
-	console.log('value:', potentiometer.value);
-
 	let lastValue = null,
 		maxValue = 1023;
 
@@ -73,7 +71,6 @@ const initKnob = function() {
 		const value = this.value;
 		if (value !== lastValue) {
 			lastValue = value;
-			// console.log(this.value, this.raw);
 			const ratio = value/maxValue;
 			hubProxy.sendEventToClients('knob.j5', {value: ratio});
 		}

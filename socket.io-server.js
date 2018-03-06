@@ -8,8 +8,7 @@ let express,
 	app,
 	port,
 	io,
-	clients,
-	clientList = {};
+	clients;
 	
 const events = require('events'),
 	nodeEventBus = new events.EventEmitter();// object to communicate events to and from other node scripts
@@ -63,14 +62,6 @@ const initClientConnections = function() {
 	clients = io.on('connect', function (socket) {
 		// A new client has come online; send it a connectionready event
 		socket.emit('connectionready');
-		clientList[socket.id] = socket;
-		// console.log(socket.id);
-		// console.log(io.sockets.clients());
-
-		socket.on('disconnect', function(e) {
-			// console.log('disconnect', e);
-			// clientList[socket.id].off('passthrough');
-		});
 
 		//set handler for events that only have to be passsed on to all sockets
 		socket.on('passthrough', passThroughHandler);// coming from frontend
