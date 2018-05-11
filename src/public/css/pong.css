@@ -1,5 +1,7 @@
 body {
 	font-family: arial, Arial, Helvetica, sans-serif;
+	background: #333;
+	color: white;
 }
 
 .field {
@@ -30,7 +32,7 @@ body {
 	width: 100px;
 	height: 20px;
 	background: #999;
-	background: #333;
+	background: #ccc;
 }
 
 .ball {
@@ -40,5 +42,5 @@ body {
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	background: #999;
+	background: #ccc;
 }
