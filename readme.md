@@ -23,6 +23,8 @@ You'll only need to do the set up stuff once, after that, you can skip to _Start
 ### Arduino hardware setup
 
 (See the breadboard layout)
+![Breadboard layout](https://github.com/jaronbarends/arduino-pong/blob/master/arduino-pong-breadboard.png)
+
 
 - Potentiometer on Ground, 5V and A2
 - Button on 11
